@@ -20,7 +20,7 @@ pip install -r requirements.txt -t lib
 3. Deploy to App Engine.
 
 ```
-gcloud deploy
+gcloud app deploy
 ```
 
 ## Usage
