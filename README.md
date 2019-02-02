@@ -1,7 +1,7 @@
 Resizing and Serving images with Google Cloud Platform
 ==================================
 
-Google Cloud storage can do a lot of interesting things by itself. If you combine it with [Images Python API](https://developers.google.com/appengine/docs/python/images/), you can use the =sXXX param to get properly scaled images that you can use for various breakpoints via picture or src-set.
+Resize your image files on Google Cloud storage with [Images Python API](https://developers.google.com/appengine/docs/python/images/) powered by Google.
 
 ## Setup
 
@@ -43,6 +43,12 @@ https://lh3.googleusercontent.com/93uhV8K2yHkRuD63KJxlTi7SxjHS8my2emuHmGLZxEmX99
 
 > If you serve images from Google Cloud Storage, you cannot serve an image from two separate apps. Only the first app that calls get_serving_url on the image can get the URL to serve it because that app has obtained ownership of the image.
 
-2. Can't scale images up above 2560 pixels.
+2. The serving url is inherently public (no support for private serving urls).
 
-3. The serving url is inherently public (no support for private serving urls).
+3. By default it returns an image of a maximum length of 512px. [(link)](https://lh3.googleusercontent.com/93uhV8K2yHkRuD63KJxlTi7SxjHS8my2emuHmGLZxEmX99_XAjTN3c_2zmKVb3XQ5d8FEkwtgbGjyYpaDQg)
+
+4. By appending the =sXX to the end of it where XX can be any integer in the range of 0–2560 and it will result to scale down the image to longest dimension without affecting the original aspect ratio. [(link =s256)](https://lh3.googleusercontent.com/93uhV8K2yHkRuD63KJxlTi7SxjHS8my2emuHmGLZxEmX99_XAjTN3c_2zmKVb3XQ5d8FEkwtgbGjyYpaDQg=s256)
+
+5. By appending =sXX-c a cropped version of that image is being returned as a response. [(link =s400-c)](https://lh3.googleusercontent.com/93uhV8K2yHkRuD63KJxlTi7SxjHS8my2emuHmGLZxEmX99_XAjTN3c_2zmKVb3XQ5d8FEkwtgbGjyYpaDQg=s400-c)
+
+6. By appending =s0 (s zero) the original image is being returned without any resize or modification. [(link =s0)](https://lh3.googleusercontent.com/93uhV8K2yHkRuD63KJxlTi7SxjHS8my2emuHmGLZxEmX99_XAjTN3c_2zmKVb3XQ5d8FEkwtgbGjyYpaDQg=s0)
