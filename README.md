@@ -1,4 +1,4 @@
-Resizing and Serving images with Google Cloud Platform
+Resizing and Serving images on Google Cloud Storage
 ==================================
 
 Resize your image files on Google Cloud storage with [Images Python API](https://developers.google.com/appengine/docs/python/images/) powered by Google.
