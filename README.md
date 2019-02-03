@@ -206,4 +206,6 @@ bool: sm  ==> StripMetadata
 int:  cv  ==> FaceCropVersion
 ```
 
-> Reference: https://stackoverflow.com/questions/25148567/list-of-all-the-app-engine-images-service-get-serving-url-uri-options
+> Reference:
+> * https://stackoverflow.com/questions/25148567/list-of-all-the-app-engine-images-service-get-serving-url-uri-options
+> * https://medium.com/google-cloud/uploading-resizing-and-serving-images-with-google-cloud-platform-ca9631a2c556
