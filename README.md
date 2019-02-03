@@ -205,3 +205,5 @@ int:  cp  ==> ColorProfile
 bool: sm  ==> StripMetadata
 int:  cv  ==> FaceCropVersion
 ```
+
+> Reference: https://stackoverflow.com/questions/25148567/list-of-all-the-app-engine-images-service-get-serving-url-uri-options
