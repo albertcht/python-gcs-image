@@ -85,7 +85,12 @@ gsutil cp file.jpg gs://<bucket>/<path>/
 
 * By appending =sXX-c a cropped version of that image is being returned as a response. [(link =s400-c)](https://lh3.googleusercontent.com/93uhV8K2yHkRuD63KJxlTi7SxjHS8my2emuHmGLZxEmX99_XAjTN3c_2zmKVb3XQ5d8FEkwtgbGjyYpaDQg=s400-c)
 
+* By appending =pp-br100-rp-s200 the image is smartly cropped, border 100%, format PNG and size is 200. [(link =pp-br100-rp-s200)](https://lh3.googleusercontent.com/93uhV8K2yHkRuD63KJxlTi7SxjHS8my2emuHmGLZxEmX99_XAjTN3c_2zmKVb3XQ5d8FEkwtgbGjyYpaDQg=pp-br100-rp-s200)
+
+* By appending =pp-br100-rp-s200 the image is smartly cropped, width 100, height 300, quality 100, format JPG. [(link =w100-h300-c-pp-l100-rj)](https://lh3.googleusercontent.com/93uhV8K2yHkRuD63KJxlTi7SxjHS8my2emuHmGLZxEmX99_XAjTN3c_2zmKVb3XQ5d8FEkwtgbGjyYpaDQg=w100-h300-c-pp-l100-rj)
+
 * By appending =s0 (s zero) the original image is being returned without any resize or modification. [(link =s0)](https://lh3.googleusercontent.com/93uhV8K2yHkRuD63KJxlTi7SxjHS8my2emuHmGLZxEmX99_XAjTN3c_2zmKVb3XQ5d8FEkwtgbGjyYpaDQg=s0)
+
 
 ## Advanced Parameters
 
