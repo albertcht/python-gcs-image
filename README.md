@@ -45,6 +45,38 @@ https://lh3.googleusercontent.com/93uhV8K2yHkRuD63KJxlTi7SxjHS8my2emuHmGLZxEmX99
 
 2. The serving url is inherently public (no support for private serving urls).
 
+## Google Cloud Storage Setup
+
+Note you need to grant **Storage Object Admin** access on your GCS objects to a GAE service account responsible for generating URLs.
+
+It looks like:
+
+```
+your-project-id@appspot.gserviceaccount.com
+```
+
+```
+# Create a new bucket.
+gsutil mb -p <project> gs://<bucket>
+
+# Set the default ACL for objects uploaded to the bucket. Note the below
+# command grants OWNER access to the service account.
+gsutil defacl ch -u account@example.com:O gs://<bucket>
+
+# If using the web uploader you will also need to grant access to the service
+# account to create objects.
+gsutil acl ch -u account@example.com:O gs://<bucket>
+
+# Ensure that the files are set with `public-read` permissions. URLs generated
+# by the images service respect GCS object permissions so if you intend to serve
+# them publicly, they will need to be `public-read`. Adjust the default ACL with
+# the command below.
+gsutil defacl set public-read gs://<bucket>
+
+# Upload assets to the Google Cloud Storage bucket.
+gsutil cp file.jpg gs://<bucket>/<path>/
+```
+
 ## Examples
 
 * By default it returns an image of a maximum length of 512px. [(link)](https://lh3.googleusercontent.com/93uhV8K2yHkRuD63KJxlTi7SxjHS8my2emuHmGLZxEmX99_XAjTN3c_2zmKVb3XQ5d8FEkwtgbGjyYpaDQg)
