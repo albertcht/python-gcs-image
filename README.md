@@ -47,13 +47,13 @@ https://lh3.googleusercontent.com/93uhV8K2yHkRuD63KJxlTi7SxjHS8my2emuHmGLZxEmX99
 
 ## Google Cloud Storage Setup
 
-Note you need to grant **Storage Object Admin** access on your GCS objects to a GAE service account responsible for generating URLs.
-
-It looks like:
+Note you need to grant **Storage Object Admin** access on your GCS objects to a GAE service account responsible for generating URLs, which looks like:
 
 ```
 your-project-id@appspot.gserviceaccount.com
 ```
+
+## gsutil Commands for Reference
 
 ```
 # Create a new bucket.
