@@ -8,7 +8,7 @@ Resize your image files on Google Cloud storage with [Images Python API](https:/
 1. Clone this repo.
 
 ```
-git clone https://github.com/albertcht/image-resize-gae.git
+git clone https://github.com/albertcht/python-gcs-image.git
 ```
 
 2. Install the requirements. (Flask)
