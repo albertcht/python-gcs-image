@@ -3,6 +3,17 @@ Resizing and Serving images on Google Cloud Storage
 
 Resize your image files on Google Cloud storage with [Images Python API](https://developers.google.com/appengine/docs/python/images/) powered by Google.
 
+### Important note ☢️
+
+This project runs on the App Engine Python 2.7 Runtime and, even though Python 2.7 is not maintaned anymore, Google has [committed to providing long term support for the App Engine Python 2.7 runtime](https://cloud.google.com/appengine/docs/standard/long-term-support#our_commitment), continuing their _"more than decade-long history of supporting your apps"_.
+
+Still, you need to be aware that:
+> As communities stop maintaining versions of their languages, your app may be exposed to vulnerabilities for which no publicly available fix exists. Thus, continuing to run your app in some App Engine runtimes involves more risk than upgrading to a runtime that has a community supported language.
+
+Also, you should know that if Google ever decides to deprecate any of the APIs used by this project, it will first be announced at their [deprecations page](https://cloud.google.com/appengine/docs/deprecations/).
+
+For more discussions on this topic, please refer to [issue #3](https://github.com/albertcht/python-gcs-image/issues/3).
+
 ## Setup
 
 1. Clone this repo.
