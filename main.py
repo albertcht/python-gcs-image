@@ -25,7 +25,7 @@ def image_url():
 	filepath = (bucket + "/" + image)
 
 	try:
-		servingImage = images.get_serving_url(None, filename='/gs/' + filepath)
+		servingImage = images.get_serving_url(None, filename='/gs/' + filepath, secure_url=True)
 	except images.AccessDeniedError:
 		error = json.dumps({'error': 'Ensure the GAE service account has access to the object in Google Cloud Storage.'})
 		return json_response(error, 401)
